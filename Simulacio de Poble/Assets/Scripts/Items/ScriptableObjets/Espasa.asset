@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e2c1556a2671f42b41680cbf1b0750, type: 3}
+  m_Name: Espasa
+  m_EditorClassIdentifier: 
+  name_ID: Espasa
+  prefab: {fileID: 498153715560292697, guid: e63b07511191c4240b2430dbd4aff4bc, type: 3}
+  weapon_Type: 1
+  interactionDistance: 1
+  damage: 30

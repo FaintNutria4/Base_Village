@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e2c1556a2671f42b41680cbf1b0750, type: 3}
+  m_Name: Arc
+  m_EditorClassIdentifier: 
+  name_ID: Arc
+  prefab: {fileID: 7614451862988727100, guid: 7a38c6958ae35ae4981c719cd79b1183, type: 3}
+  weapon_Type: 2
+  interactionDistance: 7
+  damage: 10
