@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Unity_WorkSpace\\Simulacio de Poble\\Assembly-CSharp.csproj",
+      "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "C:\\Unity_WorkSpace\\Simulacio de Poble\\Assembly-CSharp.csproj",
+      "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\Assembly-CSharp.csproj",
       "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
-      "outputPath": "C:\\Unity_WorkSpace\\Simulacio de Poble\\obj\\",
+      "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"

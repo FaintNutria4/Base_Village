@@ -382,6 +382,7 @@
 "Assets/Scripts/Villager/Inventary/Item_Template.cs"
 "Assets/Scripts/Villager/Inventary/Tool_Template.cs"
 "Assets/Scripts/Villager/Inventary/Weapon_Template.cs"
+"Assets/SpawnController.cs"
 -langversion:9.0
 
 /deterministic
