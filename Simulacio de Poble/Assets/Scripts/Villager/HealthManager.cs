@@ -23,8 +23,8 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
     public float sleepinessForSecond = 6.25f / 60;
     public float sleepinessRecover = -12.5f / 60; // valor negatiu per recuperar quan sumem el valor a la sleepiness
     public float hunger = 0;
-    public float hungerForSecond = 100 / 48 * 1 / 60;
-    public float needsLackDamage = 2 / 60;
+    public float hungerForSecond = 100f / 48 * 1f / 60;
+    public float needsLackDamage = 2f / 60;
     public Agent_System_Manager agent;
 
     public void TakeDamage(Agent_System_Manager actor, Item item)
@@ -46,7 +46,7 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
         health -= damage;
         if (health < 0)
         {
-            return agent.Inventary.items;
+            return agent.Inventary.GetCleanInventary();
         }
         else return null;
     }
@@ -56,7 +56,8 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
         Inventary killerInventary = killer.Inventary;
         Inventary inventary = agent.Inventary;
 
-        killerInventary.addItem(inventary.items);
+
+        killerInventary.addItem(inventary.GetCleanInventary());
         DestroyImmediate(gameObject);
 
 

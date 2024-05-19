@@ -13,7 +13,8 @@ public class MobHealth : MonoBehaviour, I_DamageTaker
     {
         Weapon_Template weapon = (Weapon_Template)item.item_info.template;
         health -= weapon.damage;
-        if (health < 0) Die(actor);
+        Debug.Log("me diste");
+        if (health <= 0) Die(actor);
     }
 
     private void Die(Agent_System_Manager killer)

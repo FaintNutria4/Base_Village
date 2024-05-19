@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1721960762395c248b3677c229e8f191, type: 3}
   m_Name: Trigo
   m_EditorClassIdentifier: 
-  name_ID: trigo
+  name_ID: Blat
   prefab: {fileID: 4275508179605718059, guid: e8e1fd84388cea1408c194498c066801, type: 3}
-  healing: 20
+  healingHunger: 10

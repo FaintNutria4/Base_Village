@@ -12,7 +12,7 @@ public class Inventary : MonoBehaviour
 
     public Item currentItem = null;
     public Item_Template hand_template;
-
+    private Item_Info hand;
 
     public Transform itemHolder;
 
@@ -66,15 +66,10 @@ public class Inventary : MonoBehaviour
 
         GameObject gameObject = (GameObject)Instantiate(item_Info.template.prefab, itemHolder.position, item_Info.template.prefab.GetComponent<Transform>().rotation, itemHolder);
         Item item = gameObject.AddComponent<Item>();
-        gameObject.AddComponent<HealthManager>();
         item.item_info = item_Info;
         return item;
 
     }
-
-
-
-
 
     public void Interact(Agent_System_Manager agent_System_Manager)
     {
@@ -87,20 +82,17 @@ public class Inventary : MonoBehaviour
     void Start()
     {
         ItemFactory factory = ItemFactory.GetInstance();
-        addItem(factory.CreateItemID(hand_template));
+        addItem(factory.CreateItemID(hand_template)); // Give hand as start item
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            RotateItem();
-        }
+
     }
 
     public int currentItemIndex = 0;
-    private void RotateItem()
+    public void RotateItem()
     {
         if (items.Count > currentItemIndex + 1)
         {
@@ -112,5 +104,12 @@ public class Inventary : MonoBehaviour
         }
         Item_Info selectedItem = items[currentItemIndex];
         ChangeCurrentItem(selectedItem);
+    }
+
+    public List<Item_Info> GetCleanInventary()  //Inventary with no hand
+    {
+        List<Item_Info> aux = new List<Item_Info>(items);
+        aux.Remove(hand);
+        return aux;
     }
 }

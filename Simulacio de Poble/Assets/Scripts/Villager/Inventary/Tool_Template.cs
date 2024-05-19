@@ -9,7 +9,7 @@ public class Tool_Template : Item_Template
     public override void Interact(Agent_System_Manager actor, Item item)
     {
 
-        Transform head = actor.PlayerController.head;
+        Transform head = actor.head;
         Ray ray = new Ray(head.position, head.forward);
 
 

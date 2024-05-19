@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name_ID: Carn
   prefab: {fileID: 3772709347780365113, guid: 34186eca6e25fdd488deccc5af52403b, type: 3}
-  healing: 40
+  healingHunger: 30

@@ -34,16 +34,25 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonDown(1)) LookAt(Input.mousePosition); // Right click looks
             if (Input.GetKeyDown(KeyCode.A))
             {
-                AddItem(item_Info);
-                AddItem(item_Info2);
+                Item_Template_Resouces resouces = Item_Template_Resouces.GetInstance();
+                AddItem(resouces.GetEspasa());
+
+
             }
             if (Input.GetKeyDown(KeyCode.I)) Interact();
+            if (Input.GetKeyDown(KeyCode.C)) RotateItem();
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.K)) WakeUp();// Awake if wants to
         }
 
+    }
+
+
+    public void RotateItem()
+    {
+        manager.Inventary.RotateItem();
     }
 
     private void AddItem(Item_Template item_Info)

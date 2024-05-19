@@ -20,7 +20,7 @@ public class Weapon_Template : Item_Template
 
     public override void Interact(Agent_System_Manager actor, Item item)
     {
-        Transform head = actor.PlayerController.head;
+        Transform head = actor.head;
         Ray ray = new Ray(head.position, head.forward);
         if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionDistance))
         {

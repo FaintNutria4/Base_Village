@@ -31,7 +31,8 @@ public class SpawnController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SpawnMode.Timer == spawnMode && timer >= Time.time)
+
+        if (SpawnMode.Timer == spawnMode && timer <= Time.time)
         {
             Spawn();
             timer = Time.time + timeUntilSpawn;

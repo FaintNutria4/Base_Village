@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 7492836311669513672}
   - component: {fileID: 2211814465786227080}
   - component: {fileID: 681321909575422170}
+  - component: {fileID: 2534407919768159960}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Untagged
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4582845ebfd019545a5d617ef70899cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  head: {fileID: 1448791826177488884}
   bed: {fileID: 0}
 --- !u!114 &681321909575422170
 MonoBehaviour:
@@ -364,3 +365,16 @@ MonoBehaviour:
   hungerForSecond: 0
   needsLackDamage: 0
   agent: {fileID: 2211814465786227080}
+--- !u!114 &2534407919768159960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6133037289533441091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04523f904ff1773429e0383941ac623c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
