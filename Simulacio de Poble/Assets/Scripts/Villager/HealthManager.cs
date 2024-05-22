@@ -23,15 +23,17 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
     public float sleepinessForSecond = 6.25f / 60;
     public float sleepinessRecover = -12.5f / 60; // valor negatiu per recuperar quan sumem el valor a la sleepiness
     public float hunger = 0;
-    public float hungerForSecond = 100f / 48 * 1f / 60;
-    public float needsLackDamage = 2f / 60;
+    public float hungerForSecond = 100f / 48f * 1f / 60f;
+    public float needsLackDamage = 2f / 60f;
     public Agent_System_Manager agent;
+
+
 
     public void TakeDamage(Agent_System_Manager actor, Item item)
     {
         Weapon_Template weapon = (Weapon_Template)item.item_info.template;
         health -= weapon.damage;
-        if (health < 0) Die(actor);
+        if (health <= 0) Die(actor);
     }
 
     private void TakeNecessityDamage()
@@ -40,15 +42,16 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
         if (health < 0) Die();
     }
 
-    public List<Item_Info> TakeDamage(float damage) //Method for mob dmg
+    public void TakeDamage(List<Item_Info> loot, float damage) //Method for mob dmg
     {
 
         health -= damage;
-        if (health < 0)
+        if (health <= 0)
         {
-            return agent.Inventary.GetCleanInventary();
+            loot.AddRange(agent.Inventary.GetCleanInventary());
+            Die();
         }
-        else return null;
+
     }
 
     private void Die(Agent_System_Manager killer)
@@ -65,6 +68,7 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
 
     private void Die()
     {
+
         DestroyImmediate(gameObject);
     }
 
@@ -144,7 +148,6 @@ public class HealthManager : MonoBehaviour, I_DamageTaker
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame

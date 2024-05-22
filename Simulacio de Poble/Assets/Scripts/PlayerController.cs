@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (IsAwake())
         {
             if (Input.GetMouseButtonDown(0)) Move(Input.mousePosition); //Left click moves
@@ -46,7 +48,6 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K)) WakeUp();// Awake if wants to
         }
-
     }
 
 

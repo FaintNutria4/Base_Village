@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {}
+    ".NETStandard,Version=v2.1": {
+      "FiniteStateMachineAssembly/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/FiniteStateMachineAssembly.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FiniteStateMachineAssembly.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FiniteStateMachineAssembly/1.0.0": {
+      "type": "project",
+      "path": "FiniteStateMachineAssembly.csproj",
+      "msbuildProject": "FiniteStateMachineAssembly.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": []
+    ".NETStandard,Version=v2.1": [
+      "FiniteStateMachineAssembly >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Alvaro\\.nuget\\packages\\": {}
@@ -13,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\Assembly-CSharp.csproj",
-      "projectName": "Assembly-CSharp",
-      "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\Assembly-CSharp.csproj",
+      "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj",
+      "projectName": "FiniteStateMachineEditorAssembly",
+      "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj",
       "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
       "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
       "projectStyle": "PackageReference",
@@ -31,7 +50,11 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj": {
+              "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
