@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Aixida
   m_EditorClassIdentifier: 
   name_ID: Aixida
+  interactionDistance: 5
+  interactionSpeed: 0.5
   prefab: {fileID: 1418385261558494383, guid: 5ae757802a0ce3b4aac679d9e92d56b1, type: 3}
-  interactionDistance: 200

@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Hand_Template : Item_Template
 {
-    public float interactionDistance;
+
     public override void Interact(Agent_System_Manager actor, Item item)
     {
 
-        Transform head = actor.head;
+        UnityEngine.Transform head = actor.head;
         Ray ray = new Ray(head.position, head.forward);
 
 

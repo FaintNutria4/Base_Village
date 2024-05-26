@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Espasa
   m_EditorClassIdentifier: 
   name_ID: Espasa
+  interactionDistance: 1
+  interactionSpeed: 0.5
   prefab: {fileID: 498153715560292697, guid: e63b07511191c4240b2430dbd4aff4bc, type: 3}
   weapon_Type: 1
-  interactionDistance: 1
   damage: 30

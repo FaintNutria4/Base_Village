@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Tool_Template : Item_Template
 {
-    public float interactionDistance;
+
     public override void Interact(Agent_System_Manager actor, Item item)
     {
 
-        Transform head = actor.head;
+        UnityEngine.Transform head = actor.head;
         Ray ray = new Ray(head.position, head.forward);
 
 
@@ -24,15 +24,5 @@ public class Tool_Template : Item_Template
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

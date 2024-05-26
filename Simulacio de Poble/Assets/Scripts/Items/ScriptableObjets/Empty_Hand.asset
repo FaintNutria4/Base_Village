@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Empty_Hand
   m_EditorClassIdentifier: 
   name_ID: Ma
-  prefab: {fileID: 7933571247760989654, guid: b5c9bd2e03bfbcf43b9ed8e95599efbc, type: 3}
   interactionDistance: 3
+  interactionSpeed: 0.1
+  prefab: {fileID: 7933571247760989654, guid: b5c9bd2e03bfbcf43b9ed8e95599efbc, type: 3}

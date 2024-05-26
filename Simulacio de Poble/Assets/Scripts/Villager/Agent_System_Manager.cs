@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,7 +12,7 @@ public class Agent_System_Manager : MonoBehaviour
     private AgentController agentController;
     private NavMeshAgent agentNavMesh;
     public Transform head;
-    public Bed bed;
+    public House house;
 
     public Inventary Inventary { get => inventary; set => inventary = value; }
     public HealthManager HealthManager { get => healthManager; set => healthManager = value; }
@@ -29,12 +30,48 @@ public class Agent_System_Manager : MonoBehaviour
         healthManager = gameObject.GetComponent<HealthManager>();
         agentController = gameObject.GetComponent<AgentController>();
         agentNavMesh = gameObject.GetComponent<NavMeshAgent>();
+        VillagersStateManager.GetInstance().GetVillagers().Add(this);
 
     }
 
     // Update is called once per frame
-    void Update()
+    internal bool HasWeapons()
     {
+        return inventary.items.Exists(x => x.template is Weapon_Template);
+    }
 
+    public bool HasFood()
+    {
+        return inventary.items.Exists(x => x.template is Food_Template);
+    }
+    public bool IsAwake()
+    {
+        return HealthManager.isAwake;
+    }
+    public bool isHome()
+    {
+        return house != null;
+    }
+
+    public bool CanHarvest()
+    {
+        return inventary.items.Exists(x => x.template.name_ID == "Aixida");
+    }
+
+    public bool CanHunt()
+    {
+        return inventary.items.Exists(x => x.template.name_ID == "Arc");
+    }
+    public float getCurrentInteractDistance()
+    {
+        return inventary.currentItem.item_info.template.interactionDistance;
+    }
+    public List<Transform> GetWoods()
+    {
+        return WoodsManager.GetInstance().GetWoods();
+    }
+    public FieldsStateManager GetFields()
+    {
+        return FieldsStateManager.GetInstance();
     }
 }

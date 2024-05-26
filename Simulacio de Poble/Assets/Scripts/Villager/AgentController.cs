@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,36 +28,46 @@ public class AgentController : MonoBehaviour
 
     public void RotateItem()
     {
-        if (!IsAwake()) return;
+        if (!manager.IsAwake()) return;
         manager.Inventary.RotateItem();
+    }
+
+    public bool RotateItem(Item_Template item_Template)
+    {
+        if (!manager.IsAwake()) return false;
+        Item_Info item_Info = manager.Inventary.getItemInfo(item_Template);
+        if (item_Info == null) return false;
+        else
+        {
+            manager.Inventary.ChangeCurrentItem(item_Info);
+            return true;
+        }
     }
 
     public void RotateItem(Item_Info item_Info)
     {
-        if (!IsAwake()) return;
+        if (!manager.IsAwake()) return;
         manager.Inventary.ChangeCurrentItem(item_Info);
     }
 
-    public bool IsAwake()
-    {
-        return manager.HealthManager.isAwake;
-    }
+
 
     public void WakeUp()
     {
-        if (IsAwake()) return;
-        manager.bed.WakeUp();
+        if (manager.IsAwake()) return;
+        else if (manager.house == null) return;
+        else manager.house.bed.WakeUp();
     }
     public void Move(Vector3 target)
     {
-        if (!IsAwake()) return;
+        if (!manager.IsAwake()) return;
         manager.AgentNavMesh.SetDestination(target);
 
     }
 
     public void Interact()
     {
-        if (!IsAwake()) return;
+        if (!manager.IsAwake()) return;
         Inventary inventary = manager.Inventary;
         inventary.Interact(manager);
 
@@ -65,14 +76,19 @@ public class AgentController : MonoBehaviour
 
     public void LookAt(Vector3 target)
     {
-        if (!IsAwake()) return;
+        if (!manager.IsAwake()) return;
         Vector3 aux = target;
         aux.y = manager.gameObject.transform.position.y; // the y axis must be equal to body y to not rotate the whole body to look the ground
 
         manager.gameObject.transform.LookAt(aux);
         manager.head.LookAt(target);
 
-
-
     }
+
+    internal void StopMoving()
+    {
+        Debug.Log("Stop Moving");
+        manager.AgentNavMesh.ResetPath();
+    }
+
 }

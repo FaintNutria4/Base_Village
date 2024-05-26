@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class Inventary : MonoBehaviour
     public Item_Template hand_template;
     private Item_Info hand;
 
-    public Transform itemHolder;
+    public UnityEngine.Transform itemHolder;
 
     internal void addItem(Item_Info item_info)
     {
@@ -64,7 +65,7 @@ public class Inventary : MonoBehaviour
     {
 
 
-        GameObject gameObject = (GameObject)Instantiate(item_Info.template.prefab, itemHolder.position, item_Info.template.prefab.GetComponent<Transform>().rotation, itemHolder);
+        GameObject gameObject = (GameObject)Instantiate(item_Info.template.prefab, itemHolder.position, item_Info.template.prefab.GetComponent<UnityEngine.Transform>().rotation, itemHolder);
         Item item = gameObject.AddComponent<Item>();
         item.item_info = item_Info;
         return item;
@@ -111,5 +112,11 @@ public class Inventary : MonoBehaviour
         List<Item_Info> aux = new List<Item_Info>(items);
         aux.Remove(hand);
         return aux;
+    }
+
+    internal Item_Info getItemInfo(Item_Template item_Template)
+    {
+        Item_Info item_Info = items.Find(item => item.template.name_ID == item_Template.name_ID);
+        return item_Info;
     }
 }

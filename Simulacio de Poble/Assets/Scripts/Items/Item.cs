@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
 
 
     public Item_Info item_info;
+    private float nextInteractionTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,12 @@ public class Item : MonoBehaviour
 
     public void Interact(Agent_System_Manager actor)
     {
-        item_info.template.Interact(actor, this);
+        if (nextInteractionTime <= Time.time)
+        {
+            item_info.template.Interact(actor, this);
+            nextInteractionTime = Time.time + item_info.template.interactionSpeed;
+        }
+
 
     }
 }
