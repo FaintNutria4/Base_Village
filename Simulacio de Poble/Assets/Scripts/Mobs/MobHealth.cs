@@ -13,11 +13,11 @@ public class MobHealth : MonoBehaviour, I_DamageTaker
     {
         Weapon_Template weapon = (Weapon_Template)item.item_info.template;
         health -= weapon.damage;
-        Debug.Log("me diste");
+
         if (health <= 0) Die(actor);
     }
 
-    private void Die(Agent_System_Manager killer)
+    internal virtual void Die(Agent_System_Manager killer)
     {
         Inventary killerInventary = killer.Inventary;
         ItemFactory itemFactory = ItemFactory.GetInstance();

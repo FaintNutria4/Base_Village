@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public NavMeshAgent player;
     public Camera cam;
 
-    public Transform head;
+    public UnityEngine.Transform head;
 
     public Agent_System_Manager manager;
 
@@ -38,9 +38,22 @@ public class PlayerController : MonoBehaviour
             {
                 Item_Template_Resouces resouces = Item_Template_Resouces.GetInstance();
                 AddItem(resouces.GetEspasa());
+                AddItem(resouces.GetArc());
 
 
             }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Item_Template_Resouces resouces = Item_Template_Resouces.GetInstance();
+                AddItem(resouces.GetAixida());
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                Item_Template_Resouces resouces = Item_Template_Resouces.GetInstance();
+                AddItem(resouces.GetBlat());
+                AddItem(resouces.GetCarn());
+            }
+
             if (Input.GetKeyDown(KeyCode.I)) Interact();
             if (Input.GetKeyDown(KeyCode.C)) RotateItem();
         }
@@ -70,7 +83,9 @@ public class PlayerController : MonoBehaviour
 
     private void WakeUp()
     {
-        manager.bed.WakeUp();
+        if (manager.IsAwake()) return;
+        else if (manager.house == null) return;
+        else manager.house.bed.WakeUp();
     }
     private void Move(Vector3 target)
     {

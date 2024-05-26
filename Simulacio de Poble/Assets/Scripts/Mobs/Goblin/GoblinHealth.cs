@@ -7,19 +7,18 @@ public class GoblinHealth : MobHealth
 {
     public List<Item_Info> loot = new List<Item_Info>();
 
-    private void Die(Agent_System_Manager killer)
+    public void Start()
     {
-        Inventary killerInventary = killer.Inventary;
-        ItemFactory itemFactory = ItemFactory.GetInstance();
+        MobsStateManager.GetInstance().GetGoblinList().Add(transform);
+    }
 
-        for (int i = 0; i < reward_count; i++)
-        {
-            Item_Info Item_reward = itemFactory.CreateItemID(reward);
-            killerInventary.addItem(Item_reward);
-        }
+    internal override void Die(Agent_System_Manager killer)
+    {
+        killer.Inventary.addItem(loot);
+        MobsStateManager.GetInstance().GetGoblinList().Remove(transform);
 
-        killerInventary.addItem(loot);
-        DestroyImmediate(gameObject);
+        base.Die(killer);
+
 
     }
 

@@ -6,10 +6,10 @@ using UnityEngine.AI;
 
 public class Bed : MonoBehaviour, I_Interactable
 {
-    public int bed_ID;
     public Transform sleepPosition;
     public Transform wakeTransform;
     public Transform actortransform;
+    private House house;
     HealthManager healthManager;
 
     NavMeshAgent agent;
@@ -29,7 +29,6 @@ public class Bed : MonoBehaviour, I_Interactable
 
         wakeTransform.SetPositionAndRotation(actortransform.position, actortransform.rotation);
         actortransform.SetPositionAndRotation(sleepPosition.position, sleepPosition.rotation);
-        actor.bed = this;
 
     }
 
@@ -41,16 +40,9 @@ public class Bed : MonoBehaviour, I_Interactable
         healthManager.SetIsAwake(true);
         agent.enabled = true;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        BedIDFactory factory = BedIDFactory.GetInstance();
-        bed_ID = factory.GetID();
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void SetUpHouse(House house)
     {
-
+        this.house = house;
     }
 }

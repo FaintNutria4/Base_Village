@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -18,6 +20,13 @@ public class CultivateAndHarvest : MonoBehaviour, I_Interactable
 
     private float growTimer;
 
+
+    public void Start()
+    {
+        FieldsStateManager instance = FieldsStateManager.GetInstance();
+        instance.GetEmptyFields().TryAdd(transform, false);
+
+    }
     void Update()
     {
         if (State == S_Harvest.Planted) PlantedLogic();
@@ -27,7 +36,7 @@ public class CultivateAndHarvest : MonoBehaviour, I_Interactable
 
     public void Interact(Agent_System_Manager actor, Item item)
     {
-        ;
+
         if (item.item_info.template.name_ID != tool.name_ID) return;
 
         Inventary inventary = actor.Inventary;
@@ -58,6 +67,8 @@ public class CultivateAndHarvest : MonoBehaviour, I_Interactable
             State = S_Harvest.Growed;
             planted.SetActive(false);
             growed.SetActive(true);
+            FieldsStateManager instance = FieldsStateManager.GetInstance();
+            instance.GetFullFields().Add(transform, false);
         }
     }
 
@@ -68,11 +79,18 @@ public class CultivateAndHarvest : MonoBehaviour, I_Interactable
 
         Item_Info harvest_item_info = ItemFactory.GetInstance().CreateItemID(harvest);
         inventary.addItem(harvest_item_info);
+        FieldsStateManager instance = FieldsStateManager.GetInstance();
+        instance.GetFullFields().Remove(transform);
+        instance.GetEmptyFields().Add(transform, false);
     }
     private void InteractionEmpty()
     {
         State = S_Harvest.Planted;
         growTimer = Time.time + timeToGrow;
         planted.SetActive(true);
+
+        FieldsStateManager.GetInstance().GetEmptyFields().Remove(transform);
+
+
     }
 }

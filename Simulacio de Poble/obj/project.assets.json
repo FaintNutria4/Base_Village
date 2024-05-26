@@ -11,6 +11,42 @@
         "runtime": {
           "bin/placeholder/FiniteStateMachineAssembly.dll": {}
         }
+      },
+      "FiniteStateMachineEditorAssembly/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "FiniteStateMachineAssembly": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FiniteStateMachineEditorAssembly.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FiniteStateMachineEditorAssembly.dll": {}
+        }
+      },
+      "HierarchicalFiniteStateMachineAssembly/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/HierarchicalFiniteStateMachineAssembly.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HierarchicalFiniteStateMachineAssembly.dll": {}
+        }
+      },
+      "HierarchicalFiniteStateMachineEditorAssembly/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "HierarchicalFiniteStateMachineAssembly": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HierarchicalFiniteStateMachineEditorAssembly.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HierarchicalFiniteStateMachineEditorAssembly.dll": {}
+        }
       }
     }
   },
@@ -19,11 +55,29 @@
       "type": "project",
       "path": "FiniteStateMachineAssembly.csproj",
       "msbuildProject": "FiniteStateMachineAssembly.csproj"
+    },
+    "FiniteStateMachineEditorAssembly/1.0.0": {
+      "type": "project",
+      "path": "FiniteStateMachineEditorAssembly.csproj",
+      "msbuildProject": "FiniteStateMachineEditorAssembly.csproj"
+    },
+    "HierarchicalFiniteStateMachineAssembly/1.0.0": {
+      "type": "project",
+      "path": "HierarchicalFiniteStateMachineAssembly.csproj",
+      "msbuildProject": "HierarchicalFiniteStateMachineAssembly.csproj"
+    },
+    "HierarchicalFiniteStateMachineEditorAssembly/1.0.0": {
+      "type": "project",
+      "path": "HierarchicalFiniteStateMachineEditorAssembly.csproj",
+      "msbuildProject": "HierarchicalFiniteStateMachineEditorAssembly.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "FiniteStateMachineAssembly >= 1.0.0"
+      "FiniteStateMachineAssembly >= 1.0.0",
+      "FiniteStateMachineEditorAssembly >= 1.0.0",
+      "HierarchicalFiniteStateMachineAssembly >= 1.0.0",
+      "HierarchicalFiniteStateMachineEditorAssembly >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -32,9 +86,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj",
-      "projectName": "FiniteStateMachineEditorAssembly",
-      "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj",
+      "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\Assembly-CSharp.csproj",
+      "projectName": "Assembly-CSharp",
+      "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\Assembly-CSharp.csproj",
       "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
       "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
       "projectStyle": "PackageReference",
@@ -53,6 +107,15 @@
           "projectReferences": {
             "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj": {
               "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj"
+            },
+            "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj": {
+              "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj"
+            },
+            "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj": {
+              "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj"
+            },
+            "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj": {
+              "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj"
             }
           }
         }

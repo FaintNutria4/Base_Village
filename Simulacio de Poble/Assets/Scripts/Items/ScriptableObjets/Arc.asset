@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Arc
   m_EditorClassIdentifier: 
   name_ID: Arc
+  interactionDistance: 7
+  interactionSpeed: 1.2
   prefab: {fileID: 7614451862988727100, guid: 7a38c6958ae35ae4981c719cd79b1183, type: 3}
   weapon_Type: 2
-  interactionDistance: 7
   damage: 10

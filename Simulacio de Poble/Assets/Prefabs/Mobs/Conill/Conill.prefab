@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6745251489826350840}
   - component: {fileID: 4425063610504256913}
   - component: {fileID: 2744692622473562297}
-  - component: {fileID: 1648626906798288823}
   - component: {fileID: 6014958120352226385}
   - component: {fileID: 7493557131043361444}
+  - component: {fileID: 6935647187433507999}
   m_Layer: 0
   m_Name: Conill
   m_TagString: Untagged
@@ -131,21 +131,6 @@ NavMeshAgent:
   m_BaseOffset: -0.07
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1648626906798288823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309524276181152117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eea0c1e085310a468b6ca74b807d59b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
-  reward: {fileID: 11400000, guid: 8020db6a4c390e5448b7afc288906608, type: 2}
-  reward_count: 1
 --- !u!114 &6014958120352226385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +167,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6935647187433507999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309524276181152117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e098979525f8174fbf5b606375f3c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  reward: {fileID: 11400000, guid: 8020db6a4c390e5448b7afc288906608, type: 2}
+  reward_count: 1

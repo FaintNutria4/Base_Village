@@ -601,7 +601,7 @@ MonoBehaviour:
   harvest: {fileID: 11400000, guid: 9a08693d7716a634ebdf16105b87e1c3, type: 2}
   planted: {fileID: 8526388496604641742}
   growed: {fileID: 2611922039362593079}
-  timeToGrow: 5
+  timeToGrow: 60
 --- !u!65 &1169342142835425680
 BoxCollider:
   m_ObjectHideFlags: 0

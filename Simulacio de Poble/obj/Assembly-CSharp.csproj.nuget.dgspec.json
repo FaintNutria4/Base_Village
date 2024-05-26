@@ -25,7 +25,220 @@
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj": {
+                "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj"
+              },
+              "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj": {
+                "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj"
+              },
+              "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj": {
+                "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj"
+              },
+              "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj": {
+                "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj",
+        "projectName": "FiniteStateMachineAssembly",
+        "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj",
+        "projectName": "FiniteStateMachineEditorAssembly",
+        "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineEditorAssembly.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj": {
+                "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\FiniteStateMachineAssembly.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj",
+        "projectName": "HierarchicalFiniteStateMachineAssembly",
+        "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj",
+        "projectName": "HierarchicalFiniteStateMachineEditorAssembly",
+        "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineEditorAssembly.csproj",
+        "packagesPath": "C:\\Users\\Alvaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alvaro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj": {
+                "projectPath": "C:\\Unity_WorkSpace\\Base_Village\\Simulacio de Poble\\HierarchicalFiniteStateMachineAssembly.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

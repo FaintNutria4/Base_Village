@@ -13,7 +13,7 @@ public class GoblinAttack : MonoBehaviour
     public bool Attack(GoblinController goblinController)
     {
         if (Time.time < nextAttackTime) return false;
-        Transform head = goblinController.head;
+        UnityEngine.Transform head = goblinController.head;
         Ray ray = new Ray(head.position, head.forward);
         if (Physics.Raycast(ray, out RaycastHit hitInfo, attackDistance))
         {

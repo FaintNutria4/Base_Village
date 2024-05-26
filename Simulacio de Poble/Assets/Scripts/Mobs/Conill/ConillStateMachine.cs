@@ -37,6 +37,7 @@ public class ConillStateMachine : AbstractFiniteStateMachine
         }
         public override void OnUpdate()
         {
+
             if (GetStateMachine<ConillStateMachine>().controller.villagers.Count > 0)
             {
                 TransitionToState(ConillState.FLEE);

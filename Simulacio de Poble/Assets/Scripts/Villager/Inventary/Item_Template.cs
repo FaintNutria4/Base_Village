@@ -10,6 +10,8 @@ public abstract class Item_Template : ScriptableObject
     public abstract void Interact(Agent_System_Manager actor, Item item);
 
     public String name_ID;
+    public float interactionDistance;
+    public float interactionSpeed;
 
     public UnityEngine.Object prefab;
 
